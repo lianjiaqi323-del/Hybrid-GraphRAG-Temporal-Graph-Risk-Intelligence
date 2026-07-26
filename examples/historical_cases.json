@@ -1,0 +1,55 @@
+{
+  "dataset": "synthetic_historical_cases",
+  "disclaimer": "All cases and labels are fictional.",
+  "cases": [
+    {
+      "case_id": "case_risky_01",
+      "observed_time": 3,
+      "label": "high_risk",
+      "features": {
+        "outflow_ratio": 0.88,
+        "counterparty_count": 7.0,
+        "burstiness": 0.76,
+        "average_amount_scaled": 0.61
+      },
+      "summary": "Earlier synthetic case with concentrated outflows and bursty activity."
+    },
+    {
+      "case_id": "case_risky_02",
+      "observed_time": 6,
+      "label": "high_risk",
+      "features": {
+        "outflow_ratio": 0.79,
+        "counterparty_count": 6.0,
+        "burstiness": 0.69,
+        "average_amount_scaled": 0.67
+      },
+      "summary": "Earlier synthetic case with a closely matched numeric activity profile."
+    },
+    {
+      "case_id": "case_reviewed_low_risk",
+      "observed_time": 5,
+      "label": "low_risk",
+      "features": {
+        "outflow_ratio": 0.45,
+        "counterparty_count": 4.0,
+        "burstiness": 0.22,
+        "average_amount_scaled": 0.31
+      },
+      "summary": "Earlier synthetic case reviewed as low risk."
+    },
+    {
+      "case_id": "case_future",
+      "observed_time": 11,
+      "label": "high_risk",
+      "features": {
+        "outflow_ratio": 0.82,
+        "counterparty_count": 6.0,
+        "burstiness": 0.71,
+        "average_amount_scaled": 0.65
+      },
+      "summary": "A future synthetic case that must be excluded at query time 8."
+    }
+  ]
+}
+

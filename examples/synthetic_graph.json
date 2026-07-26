@@ -1,0 +1,214 @@
+{
+  "dataset": "synthetic_portfolio_demo",
+  "disclaimer": "All identifiers, amounts, labels, and relationships are fictional.",
+  "nodes": [
+    {
+      "node_id": "wallet_query",
+      "node_type": "wallet",
+      "label": "unknown",
+      "label_available_time": null,
+      "attributes": {
+        "risk_features": {
+          "outflow_ratio": 0.82,
+          "counterparty_count": 6.0,
+          "burstiness": 0.71,
+          "average_amount_scaled": 0.65
+        }
+      }
+    },
+    {
+      "node_id": "tx_101",
+      "node_type": "transaction",
+      "label": "unknown",
+      "label_available_time": null,
+      "attributes": {}
+    },
+    {
+      "node_id": "wallet_bridge",
+      "node_type": "wallet",
+      "label": "unknown",
+      "label_available_time": null,
+      "attributes": {}
+    },
+    {
+      "node_id": "tx_102",
+      "node_type": "transaction",
+      "label": "unknown",
+      "label_available_time": null,
+      "attributes": {}
+    },
+    {
+      "node_id": "wallet_watchlist",
+      "node_type": "wallet",
+      "label": "high_risk",
+      "label_available_time": 4,
+      "attributes": {
+        "label_source": "synthetic historical watchlist"
+      }
+    },
+    {
+      "node_id": "tx_103",
+      "node_type": "transaction",
+      "label": "unknown",
+      "label_available_time": null,
+      "attributes": {}
+    },
+    {
+      "node_id": "wallet_merchant",
+      "node_type": "wallet",
+      "label": "low_risk",
+      "label_available_time": 3,
+      "attributes": {
+        "label_source": "synthetic historical review"
+      }
+    },
+    {
+      "node_id": "tx_104",
+      "node_type": "transaction",
+      "label": "unknown",
+      "label_available_time": null,
+      "attributes": {}
+    },
+    {
+      "node_id": "wallet_future_watchlist",
+      "node_type": "wallet",
+      "label": "high_risk",
+      "label_available_time": 10,
+      "attributes": {
+        "label_source": "synthetic future watchlist update"
+      }
+    },
+    {
+      "node_id": "tx_105",
+      "node_type": "transaction",
+      "label": "unknown",
+      "label_available_time": null,
+      "attributes": {}
+    },
+    {
+      "node_id": "wallet_alt_bridge",
+      "node_type": "wallet",
+      "label": "unknown",
+      "label_available_time": null,
+      "attributes": {}
+    },
+    {
+      "node_id": "tx_106",
+      "node_type": "transaction",
+      "label": "unknown",
+      "label_available_time": null,
+      "attributes": {}
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "edge_001",
+      "source": "wallet_query",
+      "target": "tx_101",
+      "relation": "inputs_to",
+      "observed_time": 5,
+      "amount": 14.2,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_002",
+      "source": "tx_101",
+      "target": "wallet_bridge",
+      "relation": "outputs_to",
+      "observed_time": 5,
+      "amount": 13.8,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_003",
+      "source": "wallet_bridge",
+      "target": "tx_102",
+      "relation": "inputs_to",
+      "observed_time": 6,
+      "amount": 12.9,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_004",
+      "source": "tx_102",
+      "target": "wallet_watchlist",
+      "relation": "outputs_to",
+      "observed_time": 6,
+      "amount": 12.5,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_005",
+      "source": "wallet_query",
+      "target": "tx_103",
+      "relation": "inputs_to",
+      "observed_time": 7,
+      "amount": 2.4,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_006",
+      "source": "tx_103",
+      "target": "wallet_merchant",
+      "relation": "outputs_to",
+      "observed_time": 7,
+      "amount": 2.3,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_007",
+      "source": "wallet_query",
+      "target": "tx_104",
+      "relation": "inputs_to",
+      "observed_time": 9,
+      "amount": 8.0,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_008",
+      "source": "tx_104",
+      "target": "wallet_future_watchlist",
+      "relation": "outputs_to",
+      "observed_time": 9,
+      "amount": 7.8,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_009",
+      "source": "wallet_query",
+      "target": "tx_105",
+      "relation": "inputs_to",
+      "observed_time": 6,
+      "amount": 5.1,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_010",
+      "source": "tx_105",
+      "target": "wallet_alt_bridge",
+      "relation": "outputs_to",
+      "observed_time": 6,
+      "amount": 4.9,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_011",
+      "source": "wallet_alt_bridge",
+      "target": "tx_106",
+      "relation": "inputs_to",
+      "observed_time": 8,
+      "amount": 4.5,
+      "currency": "SYNTH"
+    },
+    {
+      "edge_id": "edge_012",
+      "source": "tx_106",
+      "target": "wallet_watchlist",
+      "relation": "outputs_to",
+      "observed_time": 8,
+      "amount": 4.4,
+      "currency": "SYNTH"
+    }
+  ]
+}
+
